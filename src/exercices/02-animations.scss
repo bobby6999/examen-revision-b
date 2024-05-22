@@ -23,63 +23,38 @@
   .loader {
     width: 100px;
     height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #ffbe0b;
-    border-radius: 50px;
+    flex-shrink: 0;
     color: #fff;
-  }
-
-  .animations .loader {
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
     width: 100px;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(
-      to right,
-      #f3b837,
-      #e98d31,
-      #ea653c,
-      #e53455,
-      #d12c85,
-      #83418e,
-      #5e4793,
-      #bf825b,
-      #f3b837
-    );
-    border-radius: 50px;
+    background: #ffbe0b;
+    border-radius: 50%;
     color: #fff;
+    font-size: 24px;
+    animation: colorChange 3s infinite;
   }
 
-  @keyframes gradientCycle {
+  @keyframes colorChange {
     0% {
-      background-color: #f3b837;
+      background-color: #ffbe0b;
     }
-    15% {
-      background-color: #e98d31;
+    33% {
+      background-color: #ff006e;
     }
-    25% {
-      background-color: #ea653c;
-    }
-    35% {
-      background-color: #e53455;
-    }
-    50% {
-      background-color: #d12c85;
-    }
-    60% {
-      background-color: #83418e;
-    }
-    75% {
-      background-color: #5e4793;
-    }
-    80% {
-      background-color: #bf825b;
+    66% {
+      background-color: #8338ec;
     }
     100% {
-      background-color: #f3b837;
+      background-color: #ffbe0b;
     }
   }
 }
