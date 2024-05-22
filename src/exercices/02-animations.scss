@@ -6,7 +6,18 @@
     background: #ffc300;
     border-radius: 5px;
     color: #003566;
-    box-shadow: 0px 0px 4px 0px rgba(#003566, 0.25);
+    box-shadow: 0px 0px 0px 0px #0000;
+    animation: shadowPulse 2s infinite;
+  }
+
+  @keyframes shadowPulse {
+    0%,
+    100% {
+      box-shadow: 0px 0px 4px 0px #000;
+    }
+    50% {
+      box-shadow: 0px 0px 20px 5px #0000;
+    }
   }
 
   .loader {
@@ -18,5 +29,57 @@
     background: #ffbe0b;
     border-radius: 50px;
     color: #fff;
+  }
+
+  .animations .loader {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+      to right,
+      #f3b837,
+      #e98d31,
+      #ea653c,
+      #e53455,
+      #d12c85,
+      #83418e,
+      #5e4793,
+      #bf825b,
+      #f3b837
+    );
+    border-radius: 50px;
+    color: #fff;
+  }
+
+  @keyframes gradientCycle {
+    0% {
+      background-color: #f3b837;
+    }
+    15% {
+      background-color: #e98d31;
+    }
+    25% {
+      background-color: #ea653c;
+    }
+    35% {
+      background-color: #e53455;
+    }
+    50% {
+      background-color: #d12c85;
+    }
+    60% {
+      background-color: #83418e;
+    }
+    75% {
+      background-color: #5e4793;
+    }
+    80% {
+      background-color: #bf825b;
+    }
+    100% {
+      background-color: #f3b837;
+    }
   }
 }
